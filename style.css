@@ -1,0 +1,389 @@
+/* ================== Import Fonts From Google ================== */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap');
+
+/* ======================== Roots ======================= */
+:root {
+    --color-main: #191826;
+    --color-secondary: #FCFAF9;
+    --color-third: #FA7453;
+    --color-fourth: #40FFF6;
+}
+
+/* ======================== General ======================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-secondary);
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.wrapper {
+    margin: 0rem 24px;
+}
+
+/* ======================== Content || Elements ======================= */
+.circle-container {
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+}
+
+/* - Circle One - */
+.circle-one,
+.circle-two {
+    position: absolute;
+
+    width: 281.4px;
+    height: 281.4px;
+    border-radius: 100%;
+
+    mix-blend-mode: normal;
+    filter: blur(70px);
+    right: -3.5rem;
+}
+
+.circle-one {
+    right: -3.5rem;
+    top: -2rem;
+
+    background-color: var(--color-fourth);
+    opacity: 0.28;
+
+    z-index: -1;
+}
+
+/* - Circle Two - */
+.circle-two {
+    top: 9rem;
+
+    background-color: #FF9201;
+    opacity: .15;
+}
+
+/* === Header === */
+header {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    height: 95px;
+}
+
+header .logo{
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--color-main);
+}
+
+/* =================== Main ================== */
+main {
+    color: var(--color-main);
+    margin-top: 30px;
+}
+
+main h1 {
+    font-weight: 700;
+    font-size: 40px;
+}
+
+main p {
+    margin-top: 20px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+/* =================== Section One ================== */
+.section-one {
+    height: 950px;   /* <---- Focus */
+}
+
+.section-one-image {
+    margin-top: 8.375rem;
+    background-image: url(img/section-one-background.png);
+    background-position-x: 50%;
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 12px 12px 0px 0px;
+}
+
+.phone {
+    width: 208.97px;
+    height: 430px;
+    object-fit: cover;
+
+    margin-top: -5rem;
+}
+
+/* - Section One Container - */
+.section-one_container {
+    padding: 48px 32px;
+    width: 100%;
+
+    color: var(--color-secondary);
+    background-color: var(--color-third);
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.section-one_container h2 {
+     font-weight: 700;
+     font-size: 32px;
+}
+
+.section-one_container .section-one-paragraph {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 12px 0px 36px 0px;
+    opacity: .8;
+}
+
+.price .dolar{
+    font-size: 65px;
+}
+
+.price .month {
+    margin-left: 1rem;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+}
+
+/* - Button Container - */ 
+.button-container {
+    margin-top: 32px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-container button {
+    width: 296px;
+    height: 61px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+}
+
+.apple-button,
+.android-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.apple-button {
+    color: var(--color-secondary);
+    background-color: var(--color-main);
+
+    margin-bottom: 16px;
+}
+
+.apple-button svg,
+.android-button svg {
+    margin-right: 7.92px;
+}
+
+.android-button {
+    color: var(--color-main);
+    background-color: var(--color-secondary);
+}
+
+/* =================== Footer ================== */
+.footer-text .logo {
+     margin: 43px 0px 23px 0px;
+}
+
+.footer-text p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 60px;
+}
+
+.footer-text span {
+    display: block;
+    font-weight: 700;
+}
+
+.footer-icon-container svg {
+    margin-right: 20px;
+}
+
+/* ======================== Media Queries || 768px ======================= */
+@media only screen and (min-width: 768px) {
+    .image-appear {
+        position: absolute;
+        width: 266px;
+        height: 430px;
+        right: 0;
+
+        z-index: -1;
+        background-image: url(img/tablet-background.png);
+        background-size: cover;
+    }
+
+    .circle-one {
+        top: 6rem;
+        right: 3rem;
+        z-index: -2;
+        width: 384px;
+        height: 384px;
+    }
+
+    .circle-two {
+        top: -5rem;
+        left: -5rem;
+    }
+
+    .wrapper {
+        margin: 0 39px;
+    }
+
+    /* =================== Main ================== */
+    main {
+        margin-top: 85px;
+    }
+
+    main h1 {
+        width: 520px;
+
+        font-size: 64px;
+        line-height: 64px;
+        letter-spacing: -0.73px;
+    }
+
+    main p {
+        width: 514px;
+
+        font-size: 18px;
+        line-height: 28px;
+        margin-top: 24px;
+    }
+
+    /* =================== Section One ================== */
+    .section-one {
+        height: 750px;
+    }
+
+    .section-one-image {
+        display: flex;
+        justify-content: center;
+
+        border-radius: 12px;
+    }
+
+    .phone {
+        margin-top: 3rem;
+        width: 270.21px;
+        height: 556px;
+        margin-left: -24rem;
+    }
+
+    .section-one_container {
+        width: 399px;
+        height: 546px;
+        margin-top: -20rem;
+        margin-left: 7rem;
+        padding: 48px;
+    }
+
+    /* =================== Footer ================== */
+    footer .footer-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    footer .footer-text p {
+        font-size: 16px;
+        line-height: 26px;
+        width: 366px;
+    }
+
+    footer .footer-text p span {
+        display: inline-block;
+    }
+}
+
+/* ======================== Media Queries || 1440px ======================= */
+@media only screen and (min-width: 1440px) {
+    .wrapper {
+        margin:0px 170px;
+    }
+
+    .section-one {
+        margin:0px 170px;
+    }
+
+    .phone {
+        margin-top: 3rem;
+        width: 270.21px;
+        height: 556px;
+        margin-left: -39rem;
+    }
+
+    /* ============= main ============= */
+    main h1 {
+        font-size: 88px;
+        line-height: 88px;
+        width: 1015px;
+        letter-spacing: -1px;
+    }
+
+    main p {
+        font-size: 20px;
+        line-height: 34px;
+        width: 825px;
+    }
+
+    /* ============= Section One ============= */
+    .section-one_container {
+        width: 399px;
+        height: 546px;
+        margin-top: -20rem;
+        margin-left: 23rem;
+        padding: 48px;
+    }
+
+    .section-one-image {
+        background-position-x: 50%;
+        background-position-y: 30%;
+    }
+
+    /* ============= Footer ============= */
+    footer {
+        margin-top: 10rem;
+        height: 90px;
+    }
+
+    .footer-text {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 677px;
+        height: 99px;
+    }
+}
